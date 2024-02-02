@@ -17,10 +17,10 @@ app.get('/', (req, res) => {
 });
 
 io.on('connection', (socket) => {
-    socket.on('chat message', (msg) => {
+    socket.on('cursor tracking', (msg) => {
      //console.log(msg)
      //socket.broadcast.emit(msg);
-     io.emit('chat message', msg);
+     io.emit('cursor tracking', msg);
     });
   });
 

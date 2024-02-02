@@ -23,10 +23,10 @@
   function getCursorPos(event) {
     let x = event.clientX;
     let y = event.clientY;
-    socket.emit('chat message',{x ,y});
+    socket.emit('cursor tracking',{x ,y});
 }
  
-socket.on('chat message', (msg) => {
+socket.on('cursor tracking', (msg) => {
     // console.log(msg)
     const secondCursor = document.querySelector('.remote-user-cursor');
     secondCursor.style.top = msg.y + "px";
